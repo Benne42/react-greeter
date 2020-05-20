@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import Appx from "./App";
+import Greeter from "./App";
 
-const rootElement = document.getElementById("root");
 ReactDOM.render(
   <React.StrictMode>
-    <Appx />
+    <Greeter maxLength={5} />
   </React.StrictMode>,
-  rootElement
+
+  document.getElementById("root")
 );

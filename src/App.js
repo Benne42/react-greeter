@@ -1,11 +1,25 @@
 import React from "react";
 import "./styles.css";
 
-export default function Appx() {
+export default function Greeter(props) {
+  const [greeting, setGreeting] = React.useState("");
+
+  function handleGreetClick() {
+    alert(`Hello, ${greeting}`);
+  }
+
+  const charsRemaining = props.maxLength - greeting.length;
+
+  const greetingInvalid = greeting.length === 0 || charsRemaining < 0;
+
   return (
-    <div className="App">
-      <h1>Hello CodeSandbox</h1>
-      <h2>Start editing to see some magic happen!</h2>
+    <div>
+      Greeting:
+      <input value={greeting} onChange={e => setGreeting(e.target.value)} />
+      <span>{charsRemaining}</span>
+      <button disabled={greetingInvalid} onClick={handleGreetClick}>
+        Greet
+      </button>
     </div>
   );
 }
