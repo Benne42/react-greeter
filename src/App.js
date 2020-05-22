@@ -1,5 +1,4 @@
 import React from "react";
-import "./styles.css";
 
 export default function Greeter(props) {
   const [greeting, setGreeting] = React.useState("");
