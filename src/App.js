@@ -7,7 +7,7 @@ export default function Greeter(props) {
 
   // callback function
   function handleGreetClick() {
-    alert(`Hello, ${greeting}`);
+    alert(`Hello, ${greeting}!`);
   }
 
   // define variables
